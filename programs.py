@@ -145,7 +145,56 @@ def func_11():
     else:
         print("プレイヤーの負け！")
 
-# TODO: High & Low
+def func_12():
+    quizzes = ["薔薇", "案山子", "栗鼠"]
+    answers = ["ばら", "かかし", "りす"]
+
+    point = 0
+    for i in range(len(quizzes)):
+        print(quizzes[i])
+        ans = input("> ")
+        if ans == answers[i]:
+            print("正解！\n")
+            point += 1
+        else:
+            print("不正解！\n")
+
+    print(f"最終結果：{point}点")
+
+def func_13():
+    class Quiz:
+        def __init__(self, content, answer):
+            self.content = content
+            self.__answer = answer
+
+        def is_correct(self, answer):
+            return self.__answer == answer
+
+    quizzes = [
+        Quiz("薔薇", "ばら"),
+        Quiz("案山子", "かかし"),
+        Quiz("栗鼠", "りす")
+    ]
+
+    point = 0
+    for quiz in quizzes:
+        print(quiz.content)
+        answer = input("> ")
+        if quiz.is_correct(answer):
+            print("正解！\n")
+            point += 1
+        else:
+            print("不正解！\n")
+
+    print(f"最終結果：{point}点")
+
+def func_14():
+    p,t=0,print
+    for i in 1,0,2:
+        t("案薔栗山薇鼠子"[i::3])
+        c="かばりからすし"[i::3]==input("> ")
+        t("不正解！\n"[c:]);p+=c
+    t(f"最終結果：{p}点")
 
 if __name__ == "__main__":
     args = sys.argv[1:]
