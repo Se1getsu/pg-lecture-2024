@@ -60,9 +60,9 @@ def func_07():
     elif n == 2:
         print("中吉")
     elif n == 3:
-        print("凶")
+        print("吉")
     else:
-        print("大凶")  # 確率配分はお好みで
+        print("凶")  # 確率配分はお好みで
 
 def func_08():
     import random
@@ -74,9 +74,9 @@ def func_08():
         elif n == 2:
             print("中吉")
         elif n == 3:
-            print("凶")
+            print("吉")
         else:
-            print("大凶")  # 確率配分はお好みで
+            print("凶")  # 確率配分はお好みで
 
     # omikuji()
     # omikuji()
@@ -94,6 +94,18 @@ def func_08():
         omikuji()
 
 def func_09():
+    import random
+
+    def omikuji():
+        results = ["大吉", "中吉", "吉", "凶", "凶", "凶"]
+        return random.choice(results)
+
+    for i in range(10):
+        print(f"{i}回目：", end="") # これだと 0 回目からスタートする
+        result = omikuji()
+        print(result)
+
+def func_10():
     import random
 
     print("0:グー　1:チョキ　2:パー")
@@ -116,7 +128,7 @@ def func_09():
     else:
         print("プレイヤーの負け！")
 
-def func_10():
+def func_11():
     import random
 
     print("0:グー　1:チョキ　2:パー")
